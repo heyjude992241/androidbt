@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BTProject</string>
+    <string name="enter_command">Enter command</string>
+    <string name="send">Send</string>
+    <string name="connection_status">Not Connected</string>
+    <string name="n_device">No Device</string>
+    <string name="off">Off</string>
+    <string name="no_bluetooth">Device has no bluetooth</string>
+    <string name="device_no_bluetooth">Sorry, this device don\'t have bluetooth</string>
+</resources>
