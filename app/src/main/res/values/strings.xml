@@ -9,4 +9,8 @@
     <string name="device_no_bluetooth">Sorry, this device don\'t have bluetooth</string>
     <string name="bt_connected">Connected</string>
     <string name="bt_on">On</string>
+    <string name="bt_is_off">Bluetooth is off, please turn on bluetooth</string>
+    <string name="turn_on">Turn On</string>
+    <string name="bt_disconnected">Not Connected</string>
+    <string name="no_device">No device</string>
 </resources>

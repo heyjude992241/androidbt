@@ -15,6 +15,25 @@
             android:background="@color/topSect"
             android:padding="5dp"
             app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/ll_text"
+                android:layout_centerInParent="true">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/txt_connection_status"
+                    android:text="@string/connection_status" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_device_name"
+                    android:text="@string/n_device"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
             <ImageView
                 android:layout_width="24dp"
                 android:layout_height="24dp"
@@ -23,21 +42,9 @@
                 android:id="@+id/bt_dot"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="3dp"
-                android:layout_toLeftOf="@id/txt_connection_status"
-                android:layout_toStartOf="@id/txt_connection_status"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/txt_connection_status"
-                android:text="@string/connection_status" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_device_name"
-                android:text="@string/n_device"
-                android:layout_below="@id/txt_connection_status"
-                android:layout_centerHorizontal="true"/>
+                android:layout_toLeftOf="@id/ll_text"
+                android:layout_toStartOf="@id/ll_text"/>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,7 +57,7 @@
                     android:id="@+id/txt_off"
                     android:text="@string/off"
                     android:textColor="@android:color/holo_red_light"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginEnd="5dp"/>
                 <androidx.appcompat.widget.SwitchCompat
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
