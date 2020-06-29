@@ -7,4 +7,6 @@
     <string name="off">Off</string>
     <string name="no_bluetooth">Device has no bluetooth</string>
     <string name="device_no_bluetooth">Sorry, this device don\'t have bluetooth</string>
+    <string name="bt_connected">Connected</string>
+    <string name="bt_on">On</string>
 </resources>

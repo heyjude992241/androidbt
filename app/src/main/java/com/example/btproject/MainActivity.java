@@ -21,7 +21,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         btAdapter = BluetoothAdapter.getDefaultAdapter();
         binding.btnCommand.setOnClickListener(this);
-        binding.btnBlueetooth.setOnClickListener(this);
+
+
+        if(btAdapter.isEnabled()){
+            binding.txtConnectionStatus.setText(R.string.bt_connected);
+            binding.btDot.setImageResource(R.drawable.green_dot);
+            binding.txtDeviceName.setText(btAdapter.getName());
+
+        }
     }
 
     @Override
@@ -39,16 +46,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
 
                 break;
-
-            case R.id.btn_blueetooth:
-                if(btAdapter == null){
-                    Snackbar.make(binding.mainCl, R.string.no_bluetooth, Snackbar.LENGTH_SHORT).show();
-                }
-                break;
         }
     }
 
     public void toggleBluetooth(){ //on and off bluetooth
 
     }
+
+
 }

@@ -8,4 +8,6 @@
     <color name="actBg">#4C6085</color>
     <color name="bottomSect">#13C4A3</color>
     <color name="topSect">#39A0ED</color>
+    <color name="text_off">#CB4335</color>
+    <color name="text_on">#2ECC71</color>
 </resources>

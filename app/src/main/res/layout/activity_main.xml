@@ -20,6 +20,7 @@
                 android:layout_height="24dp"
                 android:layout_margin="10dp"
                 android:src="@drawable/red_dot"
+                android:id="@+id/bt_dot"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="3dp"
                 android:layout_toLeftOf="@id/txt_connection_status"
@@ -37,13 +38,33 @@
                 android:text="@string/n_device"
                 android:layout_below="@id/txt_connection_status"
                 android:layout_centerHorizontal="true"/>
-            <Button
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 android:layout_alignParentEnd="true"
-                android:id="@+id/btn_blueetooth"
-                android:text="@string/off"
-                android:drawableStart="@drawable/bluetooth_off" />
+                android:layout_centerVertical="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_off"
+                    android:text="@string/off"
+                    android:textColor="@android:color/holo_red_light"
+                    android:layout_marginRight="5dp"/>
+                <androidx.appcompat.widget.SwitchCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bt_switch" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_on"
+                    android:text="@string/bt_on"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginStart="5dp"/>
+            </LinearLayout>
+
+
 
         </RelativeLayout>
 
