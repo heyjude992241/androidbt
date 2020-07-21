@@ -1,5 +1,6 @@
 package com.example.btproject;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ActivityMainBinding binding;
     BluetoothAdapter btAdapter;
     static final int REQUEST_ENABLE_BT = 7;
+    static final int REQUEST_CONNECT_ACTIVITY = 5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
         });
-
 
         if(btAdapter.isEnabled()){
             updateViewOnBtEnabled();
@@ -61,6 +62,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void turnBluetoothOn(){
         Intent btIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
         startActivityForResult(btIntent, REQUEST_ENABLE_BT);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == REQUEST_ENABLE_BT && resultCode == RESULT_OK){
+            Intent connect = new Intent(MainActivity.this, ScanDeviceActivity.class);
+            startActivityForResult(connect, REQUEST_CONNECT_ACTIVITY);
+        }
     }
 
     private void updateViewOnBtEnabled(){
